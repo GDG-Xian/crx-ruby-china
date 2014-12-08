@@ -1,0 +1,44 @@
+{
+  "name": "Better Ruby China",
+  "short_name": "better-ruby-china",
+  "version": "1.1.1",
+  "manifest_version": 2,
+  "description": "Ruby China 功能扩展",
+  "homepage_url": "https://github.com/GDG-Xian/crx-ruby-china",
+  "background": {
+      "scripts": [
+        "modules/modules.js",
+        "assets/javascripts/underscore.js",
+        "assets/javascripts/jquery-2.0.3.js",
+        "assets/javascripts/application.js",
+        "assets/javascripts/event.js"
+      ],
+      "persistent": false
+  },
+  "options_page": "options.html",
+  "icons": {
+      "16" : "assets/images/logo-16.png",
+      "48" : "assets/images/logo-48.png",
+      "128": "assets/images/logo-128.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/images/logo-48.png",
+    "default_title": "Ruby China"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://ruby-china.org/*"],
+      "js": [
+        "assets/javascripts/underscore.js",
+        "assets/javascripts/jquery-2.0.3.js",
+        "assets/javascripts/application.js",
+        "assets/javascripts/contentscript.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "alarms",
+    "*://ruby-china.org/*"
+  ]
+}
