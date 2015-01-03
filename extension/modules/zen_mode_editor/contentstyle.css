@@ -1,0 +1,236 @@
+a[data-toggle=zen-mode]:before {
+    color: #4A8BF5;
+    content: '进入全屏模式 »';
+}
+
+body.zen-mode {
+    overflow: hidden;
+}
+
+body.zen-mode a[data-toggle=zen-mode]:before {
+    color: #4A8BF5;
+    content: '« 退出全屏模式';
+}
+
+body.zen-mode #main {
+    position: absolute;
+    overflow: hidden;
+}
+
+
+body.zen-mode #reply.form,
+body.zen-mode form.zen-mode:not(.new_reply) {
+    color: #C0C5CE;
+    position: fixed !important;
+    z-index: 10000;
+    background-color: #2B303B;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+body.zen-mode form.new_reply {
+    height: calc(100% - 40px) !important;    
+}
+
+body.zen-mode .off-zen-mode,
+body.zen-mode form.zen-mode .alert,
+body.zen-mode form.zen-mode .helpblock,
+body.zen-mode form.zen-mode .help-inline {
+    display: none;    
+}
+
+body.zen-mode .editor-toolbar {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+body.zen-mode .editor-toolbar .pills a {
+    border: none;
+    font-size: 18px;
+    color: #C0C5CE;
+}
+
+body.zen-mode .editor-toolbar .pills .active a {
+    color: #2B303B;
+}
+
+body.zen-mode .editor-toolbar .icons .small_image,
+body.zen-mode .editor-toolbar .icons .small_code {
+    width: 18px;
+    height: 18px;
+    background-size: 18px 270px;
+}
+
+body.zen-mode .editor-toolbar .icons .small_code {
+    background-position: 0 -72px;
+}
+
+body.zen-mode .editor-toolbar .icons .small_image {
+    background-position: 0 -162px;
+}
+
+body.zen-mode .editor-toolbar .icons .loading {
+    vertical-align: top;
+    font-size: 14px;
+}
+
+body.zen-mode .editor-toolbar .dropdown-menu {
+    background-color: #333946;
+    color: #AAAAAA;
+}
+
+body.zen-mode .editor-toolbar .dropdown-menu a,
+body.zen-mode .editor-toolbar .dropdown-menu i {
+    color: #AAAAAA;
+}
+
+body.zen-mode form.zen-mode .control-group.edit-tools + .control-group {
+    height: calc(100% - 100px) !important;
+    margin: 0 !important;
+}
+
+body.zen-mode form.zen-mode textarea,
+body.zen-mode form.zen-mode #preview {
+    max-width: 800px !important;
+    height: 100% !important;
+    border: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 10px !important;
+    background-image: url(http://static.zhihu.com/static/img/editor/shadow.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #2B303B;
+    font-size: 24px;
+    line-height: 1.5;
+    vertical-align: middle;
+    resize: none;
+    color: #525353;
+}
+body.zen-mode form.zen-mode textarea {
+    display: block;
+}
+body.zen-mode form.zen-mode textarea:focus {
+    border-color: transparent;
+    box-shadow: none;
+    outline: 0;
+}
+
+body.zen-mode form.zen-mode .submit-buttons,
+body.zen-mode form.zen-mode .control-group:last-of-type {
+    position: static !important;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+body.zen-mode form.zen-mode .btn-danger {
+    display: none;
+}
+
+body.zen-mode form.zen-mode .btn-primary {
+    background: none !important;
+    box-shadow: none;
+    text-shadow: none;
+    color: #989999;
+    border: 1px solid #525353;
+}
+
+body.zen-mode form.zen-mode .btn-primary:hover {
+    background-color: #333946 !important;
+    box-shadow: none;
+    text-shadow: none;
+    color: #989999;
+    border: 1px solid #525353;
+}
+
+
+body.zen-mode form.new_reply textarea,
+body.zen-mode form.new_reply #preview {
+    height: calc(100% - 60px) !important;
+}
+
+body.zen-mode form.edit_reply,
+body.zen-mode form.edit_topic {
+    height: 100% !important;
+}
+
+body.zen-mode form.edit_reply .control-group:nth-last-of-type(2),
+body.zen-mode form.new_reply  .control-group:nth-last-of-type(2),
+body.zen-mode form.edit_topic .control-group:nth-last-of-type(2) {
+    height: calc(100% - 100px);
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Markdown Preview */
+
+body.zen-mode .markdown-body a:link,
+body.zen-mode .markdown-body a:visited {
+    color: #6a6b6b !important;
+    text-decoration: underline !important;
+}
+
+body.zen-mode .markdown-body a:hover {
+    color: #989999 !important;
+    text-decoration: underline !important;
+}
+
+body.zen-mode .markdown-body img {
+    max-width: 90% !important;
+    margin: 0 auto;
+    display: block;
+}
+
+body.zen-mode .markdown-body h4 {
+    font-size: 1.1em;
+    border-bottom: 2px solid #333946;
+    padding-bottom: 10px;
+}
+
+body.zen-mode .markdown-body p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+body.zen-mode .markdown-body ul li,
+body.zen-mode .markdown-body ol li {
+    font-size: 1em;
+    line-height: 1.2;
+    color: #525353;
+}
+
+body.zen-mode .markdown-body strong {
+    color: #525353;
+}
+
+body.zen-mode .markdown-body code {
+    font-size: 0.9em !important;
+    background-color: #333946 !important;
+    color: #525353 !important;
+    line-height: 1.3;
+}
+
+body.zen-mode .markdown-body pre,
+body.zen-mode .markdown-body blockquote {
+    margin: 20px 0 30px 0 !important;
+    border: none;
+    background-color: #333946 !important;
+    padding: 5px 10px !important;
+    color: #525353 !important;
+}
+
+body.zen-mode .markdown-body pre {
+    margin: 20px 0 20px 0 !important;
+    font-size: 0.8em !important;
+    line-height: 1.3;
+}
+
+body.zen-mode .markdown-body blockquote {
+    font-size: 1em !important;
+    line-height: 1.5;
+}
